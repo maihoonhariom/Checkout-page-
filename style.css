@@ -130,7 +130,8 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: 1s;
+    transition: 1s linear;
+    
 }
 .front>div:first-child{
     display: flex;
@@ -183,5 +184,70 @@ main{
     
 }
 .card:hover .front{
+    display: none;
+    
+}
+
+
+.back{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+    color: aliceblue;
     opacity: 0;
+    /* transition:all 1s; */
+}
+
+.back>div:first-child{
+    width: 122%;
+    height: 30px;
+    background-color: black;
+    transform: translateX(-10%);
+    z-index: 2;
+}
+
+.back>div:nth-child(2){
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.back>div:nth-child(2)>img{
+    height: 35px;
+    
+}
+
+.back>div:nth-child(2)>p{
+    background-color: aliceblue;
+    padding: 5px 10px;
+    color: black;
+}
+.back>p{
+    font-size: 15px;
+    z-index: 2;
+}
+
+.back>div:last-child{
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+.back>div:last-child img{
+    width: 80px;
+    height: 20px;
+
+}
+.back>div:last-child>p{
+    font-size: 15px;
+}
+
+
+
+.card:hover .back{
+    /* transition:opacity 3s linear; */
+    transform: rotateY(180deg);
+    
+    opacity: 1;
 }
